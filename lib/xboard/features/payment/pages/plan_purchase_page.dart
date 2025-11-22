@@ -441,18 +441,20 @@ class _PlanPurchasePageState extends ConsumerState<PlanPurchasePage> {
       
     if (!mounted) return;
         
-        final paymentType = paymentResult['type'] as int? ?? 0;
-        final paymentData = paymentResult['data'];
+    final paymentType = paymentResult['type'] as int? ?? 0;
+    final paymentData = paymentResult['data'];
+        
+    _logger.debug('[支付] type=$paymentType, data=$paymentData (${paymentData.runtimeType})');
         
     // type: -1 余额支付成功（data 是 bool）
     // type: 0 跳转支付（data 是 String）
     // type: 1 二维码支付（data 是 String）
-        if (paymentType == -1) {
+    if (paymentType == -1) {
       // 免费订单/余额支付，data 是 bool
       if (paymentData == true) {
         await _handleBalancePaymentSuccess();
       } else {
-        throw Exception('支付失败: 余额支付未成功');
+        throw Exception('支付失败: 余额支付未成功 (data=$paymentData)');
       }
     } else if (paymentData != null && paymentData is String && paymentData.isNotEmpty) {
       // 付费订单，data 是支付URL（String）

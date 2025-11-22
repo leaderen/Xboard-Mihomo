@@ -56,12 +56,19 @@ class XBoardPaymentRepository implements PaymentRepository {
         );
       }
       
+      // 解析支付结果
+      final type = response['type'] as int? ?? 0;
+      final data = response['data'];
+      
+      // 根据支付类型处理 data
+      // type = -1: 余额支付，data 是 bool
+      // type = 0/1: 第三方支付，data 是 String
       final paymentResult = PaymentResult(
-        type: response['type'] as int? ?? 0,
-        data: response['data']?.toString(),
+        type: type,
+        data: data,  // 保持原始类型，不强制转字符串
       );
       
-      _logger.info('支付类型: ${paymentResult.type}');
+      _logger.info('支付类型: ${paymentResult.type}, data类型: ${data.runtimeType}');
       return Result.success(paymentResult);
       
     } on XBoardException catch (e) {

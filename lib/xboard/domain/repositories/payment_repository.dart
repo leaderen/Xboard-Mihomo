@@ -30,8 +30,11 @@ class PaymentResult {
   /// 1: 二维码支付
   final int type;
 
-  /// 支付数据（URL 或二维码数据）
-  final String? data;
+  /// 支付数据
+  /// - type = -1: bool（余额支付是否成功）
+  /// - type = 0: String（跳转支付 URL）
+  /// - type = 1: String（二维码支付数据）
+  final dynamic data;
 
   const PaymentResult({
     required this.type,
@@ -39,11 +42,14 @@ class PaymentResult {
   });
 
   /// 是否余额支付成功
-  bool get isBalancePaid => type == -1;
+  bool get isBalancePaid => type == -1 && data == true;
 
   /// 是否跳转支付
   bool get isRedirectPayment => type == 0;
 
   /// 是否二维码支付
   bool get isQRCodePayment => type == 1;
+  
+  /// 获取支付 URL（用于跳转支付和二维码支付）
+  String? get paymentUrl => data is String ? data as String : null;
 }
