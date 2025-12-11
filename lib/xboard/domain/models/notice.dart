@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'notice.freezed.dart';
-part 'notice.g.dart';
+part 'generated/notice.freezed.dart';
+part 'generated/notice.g.dart';
 
 /// 领域层：公告模型
 @freezed

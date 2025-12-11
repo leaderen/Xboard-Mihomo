@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'payment_method.freezed.dart';
-part 'payment_method.g.dart';
+part 'generated/payment_method.freezed.dart';
+part 'generated/payment_method.g.dart';
 
 /// 领域层：支付方式模型
 @freezed

@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'user.freezed.dart';
-part 'user.g.dart';
+part 'generated/user.freezed.dart';
+part 'generated/user.g.dart';
 
 /// 领域层：用户模型（统一数据模型）
 /// 

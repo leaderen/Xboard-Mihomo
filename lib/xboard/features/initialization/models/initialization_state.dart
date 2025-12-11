@@ -1,6 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'initialization_state.freezed.dart';
+part 'generated/initialization_state.freezed.dart';
 
 /// XBoard 初始化状态枚举
 enum InitializationStatus {

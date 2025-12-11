@@ -3,7 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_xboard_sdk/flutter_xboard_sdk.dart';
 import 'package:fl_clash/xboard/adapter/initialization/sdk_provider.dart';
 
-part 'ticket_state.g.dart';
+part 'generated/ticket_state.g.dart';
 
 /// 工单状态管理
 

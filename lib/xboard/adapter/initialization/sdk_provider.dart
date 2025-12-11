@@ -5,7 +5,7 @@ import 'package:fl_clash/xboard/config/xboard_config.dart';
 import 'package:fl_clash/xboard/infrastructure/http/user_agent_config.dart';
 import 'package:fl_clash/xboard/core/core.dart';
 
-part 'sdk_provider.g.dart';
+part 'generated/sdk_provider.g.dart';
 
 final _logger = FileLogger('sdk_provider');
 

@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'subscription.freezed.dart';
-part 'subscription.g.dart';
+part 'generated/subscription.freezed.dart';
+part 'generated/subscription.g.dart';
 
 /// 领域层：订阅模型
 @freezed

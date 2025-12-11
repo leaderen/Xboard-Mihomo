@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'plan.freezed.dart';
-part 'plan.g.dart';
+part 'generated/plan.freezed.dart';
+part 'generated/plan.g.dart';
 
 /// 领域层：套餐模型
 /// 

@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'order.freezed.dart';
-part 'order.g.dart';
+part 'generated/order.freezed.dart';
+part 'generated/order.g.dart';
 
 /// 领域层：订单模型
 @freezed

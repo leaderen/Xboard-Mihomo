@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'ticket.freezed.dart';
-part 'ticket.g.dart';
+part 'generated/ticket.freezed.dart';
+part 'generated/ticket.g.dart';
 
 /// 领域层：工单模型
 @freezed

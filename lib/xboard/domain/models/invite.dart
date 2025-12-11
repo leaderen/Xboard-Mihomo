@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'invite.freezed.dart';
-part 'invite.g.dart';
+part 'generated/invite.freezed.dart';
+part 'generated/invite.g.dart';
 
 /// 领域层：邀请信息模型
 @freezed
